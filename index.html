@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise on Array Method</title>
+</head>
+<body>
+    <script>
+        var fruit = ["banana", "apple", "orange", "watermelon"];
+        var vegetables = ["carrot", "tomato", "pepper", "lettuce"];
+        function labArr(fruit, vegetables) {
+        // Remove last item from Vegetable array
+        vegetables.pop();
+        console.log(`Removed last Item: ${vegetables}`);
+        // Remove first item from fruit array
+        fruit.shift();
+        console.log(`Removed first Item: ${fruit}`);
+        // Find the index of Orange
+        console.log(`index of Orange: ${fruit.indexOf("orange")}`);
+        // Push the number to the end of the fruit array
+        fruit.push(fruit.indexOf("orange"));
+        console.log(`index moved to end of fruit array: ${fruit}`);
+        // length of the vegetable array
+        console.log(`length of vegetable array: ${vegetables.length}`);
+        // Add the number to the end of the vegetable array
+        vegetables.push(vegetables.length);
+        console.log(`index moved to end of vegetables array: ${vegetables}`);
+        // Add the arrays together
+        var food = fruit.concat(vegetables);
+        console.log(`fruits and vegetable arrays merged: ${food}`);
+        // Remove two items from the new array starting from index 4
+        food.splice(4,2);
+        console.log(`Two elements removed from new array Food: ${food}`);
+        // Reverse the array
+        food.reverse();
+        console.log(`Food array reversed: ${food}`);
+        // Turn the array into a string
+        console.log(`food array into string: ${food.toString()}`);
+        }
+        labArr(fruit,vegetables);
+    </script>
+</body>
+</html>
